@@ -1,0 +1,103 @@
+
+  
+  .spacer {
+    height: 10vh; /* Full viewport height spacer */
+  }
+  .spacer1 {
+    height: 60vh; /* Full viewport height spacer */
+  }
+
+  .animatedText {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .gallery {
+    height: 175vh;
+   
+    position: relative;
+    display: flex;
+    gap: 16vw;
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: center; /* Center the columns */
+  }
+  .column1{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+
+  }
+  .column2{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    min-width: 250px;
+
+  }
+  
+  .column {
+    position: relative;
+    height: 100%;
+    width: 10%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 5vw;
+  
+    .imageContainer {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      border-radius: 1vw;
+      overflow: hidden;
+      display: flex;
+      align-items: center; /* Center images vertically */
+      justify-content: center; /* Center images horizontally */
+      background: black; /* Set background to black for image containers */
+  
+      img {
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+  
+    }
+  
+    &:nth-of-type(1) {
+      top: -45%;
+    }
+    &:nth-of-type(2) {
+      top: -95%;
+    }
+    &:nth-of-type(3) {
+      top: -45%;
+    }
+    &:nth-of-type(4) {
+      top: -75%;
+    }
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
