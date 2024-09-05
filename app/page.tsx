@@ -7,6 +7,7 @@ import { Serve } from "@/sections/Serve";
 import dynamic from "next/dynamic";
 import About from "@/sections/About";
 import ContactForm from "@/sections/ContactForm";
+import WhoWeAreSection from "@/sections/WhoWeAreSection";
 
 const WaterWaveWrapper = dynamic(
   () => import("@/components/visualEffects/WaterWaveWrapper"),
@@ -25,6 +26,7 @@ export default function Home() {
       {() => (
        <div className="pb-8">
         <About/>
+        <WhoWeAreSection/>
        {/* <Landing /> */}
        <Page />
        {/* <Serve /> */}

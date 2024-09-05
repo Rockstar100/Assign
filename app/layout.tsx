@@ -27,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400&display=swap" rel="stylesheet"></link>
+      </head>
       <body className={cn(MainFont.className, OswaldFont.variable, PixelFont1.variable)}>
         <GrainEffect />
         <Cursor color="#fff"/>
