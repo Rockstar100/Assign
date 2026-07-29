@@ -1,6 +1,7 @@
 {
-  "name": "nextjs_portfolio",
+  "name": "design-pr-social",
   "version": "0.1.0",
+  "description": "Creative agency landing page built with Next.js and Framer Motion",
   "private": true,
   "scripts": {
     "dev": "next dev",

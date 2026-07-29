@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Design PR Social
 
-## Getting Started
+A creative agency landing page with scroll-driven animation and interactive visual effects.
 
-First, run the development server:
+## Overview
+
+A single-page marketing site for a design/PR/social creative agency, featuring a water-ripple hero effect, custom cursor, film-grain overlay, and smooth-scroll animated sections (About, Who We Are, Services, Contact).
+
+## Screenshots
+
+| Landing page |
+|---|
+| ![Landing page hero with "Design PR Social" heading and navigation](docs/images/home.png) |
+
+## Technology Stack
+
+- Next.js 14 (App Router), React 18, TypeScript
+- Tailwind CSS, Sass
+- Framer Motion, Lenis (smooth scroll), Swiper
+- `react-water-wave` (interactive ripple effect), custom animated cursor
+
+## Local Installation
 
 ```bash
+git clone https://github.com/Rockstar100/Assign.git
+cd Assign
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Commands
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Command | Description |
+|---|---|
+| `npm run dev` | Run in development mode |
+| `npm run build` | Build for production |
+| `npm start` | Run the production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+Assign/
+├── app/
+│   ├── layout.tsx
+│   └── page.tsx
+├── sections/          # About, Contact, Header, Serve, WhoWeAreSection, ...
+├── components/
+│   ├── visualEffects/   # GrainEffect, WaterWaveWrapper
+│   └── cursor/           # Custom cursor
+└── lib/utils.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Fully static/client-rendered — no backend or database, so it's a good fit for GitHub Pages, Vercel, or Netlify.
 
-## Deploy on Vercel
+## Known Limitations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `@emailjs/browser` is listed as a dependency but not currently wired up to the contact section.
+- No automated tests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future Improvements
+
+- Wire up the contact form to EmailJS (or a backend endpoint) so it actually sends messages.
+- Add a smoke test for the main page.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+## Author
+
+**Parveen Jaiswal**
+GitHub: [@Rockstar100](https://github.com/Rockstar100)
